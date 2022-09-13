@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import {hydrogenMiddleware} from '@shopify/hydrogen/middleware';
 import serveStatic from 'serve-static';
 import compression from 'compression';
@@ -21,8 +22,7 @@ app.use(
     getServerEntrypoint: () => import('./src/App.server'),
     indexTemplate: () => import('./dist/client/index.html?raw'),
     // Optional: Provide a custom strategy for caching in production. Defaults to in-memory.
-    cache: customCacheImplementation,
-  })
+  }),
 );
 
 app.listen(port, () => {
